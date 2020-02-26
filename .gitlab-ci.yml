@@ -1,3 +1,6 @@
+variables:
+  WEBSITE_DIRECTORY: "/Users/justin/Unity/JustinTrotter.github.io"
+
 stages:
   - test
   - build
@@ -20,6 +23,11 @@ yarn-build:
     - website
 deploy:
   stage: deploy
-  script: echo 'Deploying...'
+  script: 
+    - cp -r ./build/* $WEBSITE_DIRECTORY
+    - cd $WEBSITE_DIRECTORY
+    - git add -A
+    - git commit -m "deploy commit ${CI_COMMIT_SHA:0:8}"
+    - git push
   tags: 
     - website
