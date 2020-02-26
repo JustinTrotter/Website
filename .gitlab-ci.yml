@@ -9,7 +9,13 @@ unit-test:
     - website
 yarn-build:
   stage: build
-  script: yarn && yarn build && ls -larth
+  artifacts:
+    paths:
+    - build/
+    expire_in: 1 week
+  script:
+    - yarn
+    - yarn build
   tags: 
     - website
 deploy:
