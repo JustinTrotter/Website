@@ -9,7 +9,7 @@ unit-test:
     - website
 yarn-build:
   stage: build
-  script: yarn && yarn build
+  script: yarn && yarn build && ls -larth
   tags: 
     - website
 deploy:
