@@ -1,0 +1,19 @@
+stages:
+  - test
+  - build
+  - deploy
+unit-test:
+  stage: test
+  script: echo 'Testing...'
+  tags: 
+    - website
+yarn-build:
+  stage: build
+  script: yarn build
+  tags: 
+    - website
+deploy:
+  stage: deploy
+  script: echo 'Deploying...'
+  tags: 
+    - website
