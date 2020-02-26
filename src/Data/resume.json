@@ -1,0 +1,35 @@
+{
+    "name":"Justin Trotter",
+    "occupation":"Software Engineer",
+    "occupation2":"Independent Game Developer",
+    "description":"Here will be your description. Use this to describe what you do or whatever you feel best describes yourself to a potential employer",
+    "image":"profilepic.jpg",
+    "bio":"Use this bio section as your way of describing yourself and saying what you do, what technologies you like to use or feel most comfortable with, describing your personality, or whatever else you feel like throwing in.",
+    "contactmessage":"Here is where you should write your message to readers to have them get in contact with you.",
+    "email": "trotter.justin@gmail.com",
+    "address":{
+      "street":"",
+      "city":"Memphis",
+      "state":"Tennessee ",
+      "zip": "38133"
+    },
+    "website": "http://www.timbakerdev.com",
+    "resumedownload":"http://timbakerdev.com",
+    "social":[
+      {
+        "name":"linkedin",
+        "url":"https://www.linkedin.com/in/justin-trotter-b292224a/",
+        "className":"fab fa-linkedin"
+      },
+      {
+        "name":"github",
+        "url":"http://github.com/justintrotter",
+        "className":"fab fa-github"
+      },
+      {
+        "name":"discord",
+        "url":"https://discord.gg/xs9TFVW",
+        "className":"fab fa-discord"
+      }
+    ]
+  }
