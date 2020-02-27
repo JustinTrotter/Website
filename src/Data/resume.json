@@ -32,5 +32,140 @@
         "url":"https://discord.gg/xs9TFVW",
         "className":"fab fa-discord"
       }
+    ],
+    "education":[
+      {
+        "school":"University?",
+        "degree":"Masters in Beer tasting",
+        "graduated":"April 2007",
+        "description":"Describe your experience at school, what you learned, what useful skills you have acquired etc."
+      },
+      {
+        "school":"School #1 Maybe College?",
+        "degree":"What did you study 101",
+        "graduated":"March 2003",
+        "description":"Describe your experience at school, what you learned, what useful skills you have acquired etc."
+      }
+    ],
+    "work":[
+      {
+        "company":"Awesome Design Studio",
+        "title":"Senior UX God ",
+        "years":"March 2010 - Present",
+        "description":"Describe work, special projects, notable achievements, what technologies you have been working with, and anything else that would be useful for an employer to know."
+      },
+      {
+        "company":"Super Cool Studio",
+        "title":"Junior bug fixer",
+        "years":"March 2007 - February 2010",
+        "description":"Describe work, special projects, notable achievements, what technologies you have been working with, and anything else that would be useful for an employer to know."
+      }
+    ],
+    "skills":[
+      {
+        "name":"Javascript",
+        "level":"expert",
+        "type":"language"
+      },
+      {
+        "name":"C#",
+        "level":"advanced",
+        "type":"language"
+      },
+      {
+        "name":"C++",
+        "level":"advanced",
+        "type":"language"
+      },
+      {
+        "name":"Html",
+        "level":"advanced",
+        "type":"language"
+      },
+      {
+        "name":"CSS",
+        "level":"advanced",
+        "type":"language"
+      },
+      {
+        "name":"Python",
+        "level":"intermediate",
+        "type":"language"
+      },
+      {
+        "name":"Java",
+        "level":"intermediate",
+        "type":"language"
+      },
+      {
+        "name":"React",
+        "level":"expert",
+        "type":"tool"
+      },
+      {
+        "name":"Redux",
+        "level":"expert",
+        "type":"tool"
+      },
+      {
+        "name":"Node.js",
+        "level":"advanced",
+        "type":"tool"
+      },
+      {
+        "name":"Jest",
+        "level":"intermediate",
+        "type":"tool"
+      },
+      {
+        "name":"Jquery",
+        "level":"basic",
+        "type":"tool"
+      },
+      {
+        "name":"Bootstrap",
+        "level":"basic",
+        "type":"tool"
+      },
+      {
+        "name":"Angular",
+        "level":"learning",
+        "type":"tool"
+      },
+      {
+        "name":"Git/Gitlab",
+        "level":"advanced",
+        "type":"devops"
+      },
+      {
+        "name":"Docker",
+        "level":"basic",
+        "type":"devops"
+      },
+      {
+        "name":"Jenkins",
+        "level":"basic",
+        "type":"devops"
+      },
+      {
+        "name":"Ansible",
+        "level":"learning",
+        "type":"devops"
+      },
+      {
+        "name":"Unity3D",
+        "level":"expert",
+        "type":"gamedev"
+      },
+      {
+        "name":"Gimp",
+        "level":"basic",
+        "type":"gamedev"
+      },
+      {
+        "name":"Blender",
+        "level":"learning",
+        "type":"gamedev"
+      }
     ]
   }

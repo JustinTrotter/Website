@@ -36,7 +36,7 @@ body { background: #0f0f0f; }
 
 header {
    position: relative;
-   height: 800px;
+   height: 100vh;
    min-height: 500px;
    width: 100%;
    background: linear-gradient( rgba(0,0,0,0.75), rgba(0, 0, 0, 0.75) ),url(../images/memphis.jpg) no-repeat center center fixed;
@@ -149,7 +149,7 @@ header .scrolldown a:hover { color: #11ABB0; }
 	 margin: 0;
 	 padding: 0;
 	 border: none;
-	 outline: none;
+    outline: none;
 }
 
 /* nav-wrap */
@@ -163,6 +163,7 @@ header .scrolldown a:hover { color: #11ABB0; }
    position: fixed;
    left: 0;
    top: 0;
+   background: rgba(43,43,43,.8);
 }
 .opaque { background-color: #333; }
 
@@ -311,6 +312,7 @@ ul#nav li.current a { color: #F06000; }
 /*	Skill Bars
 /*----------------------------------------------*/
 
+/*
 .bars {
 	width: 95%;
 	float: left;
@@ -350,6 +352,7 @@ ul#nav li.current a { color: #F06000; }
    line-height: 42px;
    border-radius: 3px 0 0 3px;
 }
+*/
 /*
 .git {
   	-moz-animation: git 2s ease;
@@ -437,6 +440,85 @@ ul#nav li.current a { color: #F06000; }
   0%   { width: 0px;  }
   100% { width: 80%;  }
 }  */
+
+.skills {
+   columns: 3;
+   -webkit-columns: 3;
+   -moz-columns: 3;
+ }
+
+@keyframes load{
+   from {
+     width: 0%
+   }
+ }
+ @-webkit-keyframes load{
+   from {
+     width: 0%
+   }
+ }
+ @-moz-keyframes load{
+   from {
+     width: 0%
+   }
+ }
+ @-o-keyframes load{
+   from {
+     width: 0%
+   }
+ }
+ 
+ .bar {
+   height: 17px;
+   line-height: 15px;
+   background-color: #EEE;
+   border-radius: 15px;
+   margin-bottom: 5px;
+   font-size: 14px;
+   color: #FFF;
+   font-weight: bold;
+   text-shadow: 1px 1px 1px rgba(0,0,0,0.75);
+   text-align: left;
+   overflow: hidden;
+ }
+ .bar::before{
+   content:  attr(data-skill);
+   background-color: #9a55c9;
+   display: inline-block;
+   border-radius: inherit;
+   padding: 1px 1px 1px 10px;
+   animation: load 2s 0s;
+   -webkit-animation: load 2s 0s;
+   -moz-animation: load 2s 0s;
+   -o-animation: load 2s 0s;
+ }
+ 
+ .bar.tool::before{
+   background-color: #3385ff;
+ }
+ .bar.devops::before{
+   background-color: #2fcc56;
+ }
+
+ .bar.gamedev::before{
+   background-color: #11ABB0;
+ }
+ 
+ .bar.learning::before{
+   width: calc(20%);
+ }
+ .bar.basic::before{
+   width: calc(40%);
+ }
+ .bar.intermediate::before{
+   width: calc(60%);
+ }
+ .bar.advanced::before{
+   width: calc(80%);
+ }
+ .bar.expert::before{
+   width: calc(100%);
+ }
 
 /* ------------------------------------------------------------------ */
 /* e. Portfolio Section
