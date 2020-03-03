@@ -1,17 +1,17 @@
 import React from 'react';
 import './App.css';
+import Header from './Components/Header';
+import About from './Components/About';
+import Experience from './Components/Experience';
+import Portfolio from './Components/Portfolio';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <h1>
-          Justin Trotter's Website
-        </h1>
-        <h3>
-          is under construction.
-        </h3>
-      </header>
+      <Header/>
+      <About/>
+      <Experience/>
+      <Portfolio/>
     </div>
   );
 }

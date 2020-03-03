@@ -7,11 +7,15 @@ stages:
   - deploy
 unit-test:
   stage: test
+  only:
+    - master
   script: echo 'Testing...'
   tags: 
     - website
 yarn-build:
   stage: build
+  only:
+    - master
   artifacts:
     paths:
     - build/
@@ -23,6 +27,8 @@ yarn-build:
     - website
 deploy:
   stage: deploy
+  only:
+    - master
   script: 
     - cp -r ./build/* $WEBSITE_DIRECTORY
     - cd $WEBSITE_DIRECTORY
