@@ -1,20 +1,19 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import jsonData from '../Data/resume.json';
 
-const About = () => {
+const About = forwardRef((props, ref) => {
 
   const {name, bio, address, phone, email, resumeDownload} = jsonData;
   const profilepic = "images/" + jsonData.image;
 
   return (
-    <section id="about">
+    <section id="about" ref={ref}>
       <div className="row">
         <div className="three columns">
           <img className="profile-pic"  src={profilepic} alt={`${name} Profile Pic`}/>
         </div>
         <div className="nine columns main-col">
           <h2>About Me</h2>
-
           <p>{bio}</p>
           <div className="row">
             <div className="columns contact-details">
@@ -38,6 +37,6 @@ const About = () => {
       </div>
     </section>
   );
-}
+})
 
 export default About;

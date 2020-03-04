@@ -1,17 +1,25 @@
 import React from 'react';
-import './App.css';
-import Header from './Components/Header';
-import About from './Components/About';
-import Experience from './Components/Experience';
-import Portfolio from './Components/Portfolio';
+import Home from './Pages/Home';
+import Game from './Pages/Game';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-      <Header/>
-      <About/>
-      <Experience/>
-      <Portfolio/>
+      <Router>
+        <Switch>
+          <Route path="/portfolio/:gameId">
+            <Game/>
+          </Route>
+          <Route path="/">
+            <Home />
+          </Route>
+        </Switch>
+      </Router>
     </div>
   );
 }
