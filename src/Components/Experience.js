@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import jsonData from '../Data/resume.json';
 
-const Experience = () => {
+const Experience = forwardRef((props, ref) => {
   var education = jsonData.education.map(function(education){
     return <div key={education.school}><h3>{education.school}</h3>
     <p className="info">{education.degree} <span>&bull;</span><em className="date">{education.graduated}</em></p>
@@ -15,11 +15,11 @@ const Experience = () => {
   })
   var skills = jsonData.skills.map(function(skills){
     /*return <li key={skills.name}><span style={{width:skills.level}}className={className}></span><em>{skills.name}</em></li>*/
-    return <div className={`bar ${skills.level} ${skills.type}`} data-skill={`${skills.name}`}></div>
+    return <div key={skills.name} className={`bar ${skills.level} ${skills.type}`} data-skill={`${skills.name}`}></div>
   })
 
     return (
-      <section id="resume">
+      <section id="resume" ref={ref}>
 
 <div className="row skill">
 
@@ -61,6 +61,6 @@ const Experience = () => {
       </div>
    </section>
     );
-  }
+  })
 
 export default Experience;

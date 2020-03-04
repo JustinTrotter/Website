@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import { Link } from "react-router-dom";
 import jsonData from '../Data/resume.json';
 
-const Portfolio = () => {
+const Portfolio = forwardRef((props, ref) => {
     const projects = jsonData.projects?.map(function(projects){
         const projectImage = '/images/' + projects.image;
         return <div key={projects.title} className="columns portfolio-item">
@@ -22,7 +22,7 @@ const Portfolio = () => {
     })
 
   return (
-    <section id="portfolio">
+    <section id="portfolio" ref={ref}>
       <div className="row">
         <div className="twelve columns collapsed">
           <h1>Games that I have made over the years.</h1>
@@ -33,6 +33,6 @@ const Portfolio = () => {
       </div>
     </section>
   );
-}
+})
 
 export default Portfolio;

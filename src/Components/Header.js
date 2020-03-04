@@ -1,13 +1,13 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import jsonData from '../Data/resume.json';
 
-const Header = () => {
+const Header = forwardRef((props, ref) => {
   const {name, occupation, occupation2, description} = jsonData;
   const networks = jsonData.social.map((network) => {
     return <li key={network.name}><a href={network.url}><i className={network.className}></i></a></li>
   })
   return (
-    <header id="home">
+    <header id="home" ref={ref}>
       <div className="row banner">
         <div className="banner-text">
           <h1 className="responsive-headline">{name}</h1>
@@ -27,6 +27,6 @@ const Header = () => {
 
     </header>
   );
-}
+})
 
 export default Header;

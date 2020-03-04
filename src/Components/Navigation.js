@@ -1,11 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { HashLink as Link } from "react-router-hash-link";
 
-const Navigation = () => {
-  const [hash, setHash] = useState("#home");
+const Navigation = (props) => {
+  const [hash, setHash] = useState(window.location.hash || "#home");
+
+  useEffect(() => {
+    setHash("#" + props.currentSection)
+  },[props.currentSection]);
 
   const navItems = ["home", "about", "resume", "portfolio"];
-
 
   return (
     <nav id="nav-wrap">
@@ -13,10 +16,10 @@ const Navigation = () => {
       <a className="mobile-btn" href="#home" title="Hide navigation">Hide navigation</a>
       <ul id="nav" className="nav">
         {navItems.map(item => 
-          <li className={hash === `#${item}` ? "current" : ""}>
+          <li key={item} className={hash === `#${item}` ? "current" : ""}>
             <Link 
               to={`/#${item}`} 
-              onClick={()=>setHash(`#${item}`)}>
+              onClick={() => setHash(`#${item}`)}>
                 {item}
             </Link>
           </li>
