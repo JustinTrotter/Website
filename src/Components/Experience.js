@@ -15,7 +15,7 @@ const Experience = () => {
   })
   var skills = jsonData.skills.map(function(skills){
     /*return <li key={skills.name}><span style={{width:skills.level}}className={className}></span><em>{skills.name}</em></li>*/
-    return <div class={`bar ${skills.level} ${skills.type}`} data-skill={`${skills.name}`}></div>
+    return <div className={`bar ${skills.level} ${skills.type}`} data-skill={`${skills.name}`}></div>
   })
 
     return (

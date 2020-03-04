@@ -1,12 +1,13 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import jsonData from '../Data/resume.json';
 
 const Portfolio = () => {
     const projects = jsonData.projects?.map(function(projects){
-        const projectImage = 'images/portfolio/' + projects.image;
+        const projectImage = '/images/' + projects.image;
         return <div key={projects.title} className="columns portfolio-item">
           <div className="item-wrap">
-            <a href={projects.url} title={projects.title}>
+            <Link to={projects.url} title={projects.title}>
               <img alt={projects.title} src={projectImage} />
                 <div className="overlay">
                   <div className="portfolio-item-meta">
@@ -15,7 +16,7 @@ const Portfolio = () => {
                   </div>
                 </div>
               <div className="link-icon"><i className="fa fa-link"></i></div>
-            </a>
+            </Link>
           </div>
         </div>
     })
@@ -25,7 +26,7 @@ const Portfolio = () => {
       <div className="row">
         <div className="twelve columns collapsed">
           <h1>Games that I have made over the years.</h1>
-          <div id="portfolio-wrapper" className="bgrid-quarters s-bgrid-thirds cf">
+          <div id="portfolio-wrapper" className="bgrid-quarters s-bgrid-thirds cf portfolio-wrapper">
               {projects}
           </div>
         </div>
