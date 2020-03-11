@@ -27,7 +27,6 @@ const Experience = forwardRef((props, ref) => {
     )
   })
   var skills = jsonData.skills.map(function(skills) {
-    /*return <li key={skills.name}><span style={{width:skills.level}}className={className}></span><em>{skills.name}</em></li>*/
     return (
       <div
         key={skills.name}

@@ -1,9 +1,7 @@
 import React from "react"
 import Navigation from "../components/navigation"
-//import { useParams } from "react-router-dom";
 
 function Game() {
-  //const { gameId } = useParams();
   const gameId = "temp"
   return (
     <>
