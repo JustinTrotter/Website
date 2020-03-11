@@ -18,7 +18,7 @@ yarn-build:
     - master
   artifacts:
     paths:
-    - build/
+    - public/
     expire_in: 1 week
   script:
     - yarn
@@ -30,7 +30,7 @@ deploy:
   only:
     - master
   script: 
-    - cp -r ./build/* $WEBSITE_DIRECTORY
+    - cp -r ./public/* $WEBSITE_DIRECTORY
     - cd $WEBSITE_DIRECTORY
     - git add -A
     - git commit -m "deploy commit ${CI_COMMIT_SHA:0:8}"

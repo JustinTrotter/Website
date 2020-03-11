@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react"
-import root from 'window-or-global'
+import root from "window-or-global"
 import { Link } from "gatsby"
 
 const Navigation = props => {
