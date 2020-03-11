@@ -1,15 +1,37 @@
 import React, { forwardRef } from "react"
-import { Link } from "gatsby"
+import { StaticQuery, graphql, Link } from "gatsby"
+import Img from "gatsby-image"
 import jsonData from "../data/resume.json"
 
 const Portfolio = forwardRef((props, ref) => {
+  const query = graphql`
+    query($projectImage: String) {
+      file(relativePath: { eq: $projectImage }) {
+        childImageSharp {
+          # Specify the image processing specifications right in the query.
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `;
+
   const projects = jsonData.projects?.map(function(projects) {
-    const projectImage = "/images/" + projects.image
     return (
       <div key={projects.title} className="columns portfolio-item">
         <div className="item-wrap">
           <Link to={projects.url} title={projects.title}>
-            <img alt={projects.title} src={projectImage} />
+            <StaticQuery
+              query={query}
+              render={data => (
+                <Img
+                  fluid={data.file.childImageSharp.fluid}
+                  alt={projects.title}
+                  projectImage={projects.image}
+                />
+              )}
+            />
             <div className="overlay">
               <div className="portfolio-item-meta">
                 <h5>{projects.title}</h5>
