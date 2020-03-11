@@ -1,14 +1,15 @@
-import React from 'react';
-import Home from './Pages/Home';
-import Game from './Pages/Game';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route
-} from "react-router-dom";
+import React from "react"
+import Home from "./home"
+//import Game from './Pages/Game';
 
-function App() {
+export default () => {
   return (
+    <div className="App">
+      <Home />
+    </div>
+  )
+
+  /*return (
     <div className="App">
       <Router>
         <Switch>
@@ -21,7 +22,5 @@ function App() {
         </Switch>
       </Router>
     </div>
-  );
+  );*/
 }
-
-export default App;
