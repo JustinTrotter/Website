@@ -3,7 +3,7 @@ import root from 'window-or-global'
 import { Link } from "gatsby"
 
 const Navigation = props => {
-  const [hash, setHash] = useState(root.location.hash || "#home")
+  const [hash, setHash] = useState(root.location?.hash || "#home")
 
   useEffect(() => {
     setHash("#" + props.currentSection)
