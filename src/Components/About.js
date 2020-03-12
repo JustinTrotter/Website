@@ -20,13 +20,13 @@ export default forwardRef((props, ref) => {
           }
         }
       `}
-      render={data => (
+      render={images => (
         <section id="about" ref={ref}>
           <div className="row">
             <div className="three columns">
               <Img
                 className="profile-pic"
-                fluid={data.file.childImageSharp.fluid}
+                fluid={images.file.childImageSharp.fluid}
                 alt="profile picture"
               />
             </div>
