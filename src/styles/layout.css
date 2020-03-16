@@ -36,16 +36,97 @@ body { background: #0f0f0f; }
 
 header {
    position: relative;
-   height: 100vh;
-   min-height: 500px;
    width: 100%;
+   
    background: linear-gradient( rgba(0,0,0,0.75), rgba(0, 0, 0, 0.75) ),url(../images/memphis.jpg) no-repeat center center fixed;
    background-size: cover !important;
-	-webkit-background-size: cover !important;
+   -webkit-background-size: cover !important;
+   background-attachment: scroll;
    text-align: center;
    overflow: hidden;
 
    animation: animatedBackground 120s linear infinite;
+}
+
+/* fix iOS bug not displaying 100vh correctly */
+
+/*/ iPhone 11 and iPhone XR*/
+@media only screen and (min-device-width : 414px) and (max-device-height : 896px) and (orientation : landscape) {
+	.fullheight {
+		height: 414px;
+	}
+}
+@media only screen and (min-device-width : 414px) and (max-device-height : 896px) and (orientation : portrait){
+	.fullheight {
+		height: 896px;
+	}
+}
+
+/*/ iPhone X*/
+@media only screen and (min-device-width : 375px) and (max-device-height : 812px) and (orientation : landscape) {
+	.fullheight {
+		height: 375px;
+	}
+}
+@media only screen and (min-device-width : 375px) and (max-device-height : 812px) and (orientation : portrait) {
+	.fullheight {
+		height: 812px;
+	}
+}
+/*/ iPhone 6, 7, & 8 Plus*/
+@media only screen and (min-device-width : 414px) and (max-device-height : 736px) and (orientation : landscape) {
+	.fullheight {
+		height: 414px;
+	}
+}
+@media only screen and (min-device-width : 414px) and (max-device-height : 736px) and (orientation : portrait) {
+	.fullheight {
+		height: 736px;
+	}
+}
+/*/ iPhone 6, 7, & 8*/
+@media only screen and (min-device-width : 375px) and (max-device-height : 667px) and (orientation : landscape) {
+	.fullheight {
+		height: 375px;
+	}
+}
+@media only screen and (min-device-width : 375px) and (max-device-height : 667px) and (orientation : portrait) {
+	.fullheight {
+		height: 667px;
+	}
+}
+/* ipad */
+@media only screen and (min-device-width : 768px) and (max-device-height : 1024px) and (orientation : landscape) {
+	.fullheight {
+		height: 768px;
+	}
+}
+@media only screen and (min-device-width : 768px) and (max-device-height : 1024px) and (orientation : portrait) {
+	.fullheight {
+		height: 1024px;
+	}
+}
+/* iphone5 */
+@media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation : landscape) {
+	.fullheight {
+		height: 320px;
+	}
+}
+@media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation : portrait) {
+	.fullheight {
+		height: 568px;
+	}
+}
+/* iPhone 4 */
+@media only screen and (min-device-width : 320px) and (max-device-height : 480px) and (orientation : landscape) {
+	.fullheight {
+		height: 320px;
+	}
+}
+@media only screen and (min-device-width : 320px) and (max-device-height : 480px) and (orientation : portrait) {
+	.fullheight {
+		height: 480px;
+	}
 }
 
 
