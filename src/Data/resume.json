@@ -170,16 +170,39 @@
   ],
   "projects": [
     {
-      "title": "Computational Driving",
+      "name": "Computational Driving",
       "category": "GameJam",
-      "image": "ComputationalDriving.png",
-      "url": "/portfolio/Computational-Driving"
+      "image": "ComputationalDriving.png"
     },
     {
-      "title": "Computational Driving 2",
+      "name": "Computational Driving 2",
       "category": "GameJam 2",
-      "image": "ComputationalDriving.png",
-      "url": "/portfolio/Computational-Driving-2"
+      "image": "ComputationalDriving.png"
+    },
+    {
+      "name": "Computational Driving 3",
+      "category": "GameJam",
+      "image": "ComputationalDriving.png"
+    },
+    {
+      "name": "Computational Driving 4",
+      "category": "GameJam",
+      "image": "ComputationalDriving.png"
+    },
+    {
+      "name": "Computational Driving 5",
+      "category": "GameJam",
+      "image": "ComputationalDriving.png"
+    },
+    {
+      "name": "Computational Driving 6",
+      "category": "GameJam",
+      "image": "ComputationalDriving.png"
+    },
+    {
+      "name": "Computational Driving 7",
+      "category": "GameJam",
+      "image": "ComputationalDriving.png"
     }
   ]
 }

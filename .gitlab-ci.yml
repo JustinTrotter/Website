@@ -22,6 +22,7 @@ yarn-build:
     expire_in: 1 week
   script:
     - yarn
+    - yarn clean
     - yarn build
   tags: 
     - website
@@ -30,6 +31,7 @@ deploy:
   only:
     - master
   script: 
+    - rm -rf $WEBSITE_DIRECTORY/*
     - cp -r ./public/* $WEBSITE_DIRECTORY
     - cd $WEBSITE_DIRECTORY
     - git add -A

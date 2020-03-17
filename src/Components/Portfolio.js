@@ -37,22 +37,22 @@ const Portfolio = forwardRef((props, ref) => {
   `
 
   const projects = thumbnails => {
-    return jsonData.projects?.map(projects => {
+    return jsonData.projects?.map(project => {
       const image = thumbnails.find(
         thumbnail =>
-          thumbnail.childImageSharp.fluid.originalName === projects.image
+          thumbnail.childImageSharp.fluid.originalName === project.image
       )
       return (
-        <div key={projects.title} className="columns portfolio-item">
+        <div key={project.name} className="columns portfolio-item">
           <div className="item-wrap">
-            <Link to={projects.url} title={projects.title}>
+            <Link to={`/portfolio/${project.name}`} title={project.name}>
               {image && (
-                <Img fluid={image.childImageSharp.fluid} alt={projects.title} />
+                <Img className="portfolio-image" fluid={image.childImageSharp.fluid} alt={project.name} />
               )}
               <div className="overlay">
                 <div className="portfolio-item-meta">
-                  <h5>{projects.title}</h5>
-                  <p>{projects.category}</p>
+                  <h5>{project.name}</h5>
+                  <p>{project.category}</p>
                 </div>
               </div>
               <div className="link-icon">
@@ -60,6 +60,7 @@ const Portfolio = forwardRef((props, ref) => {
               </div>
             </Link>
           </div>
+          <h2>{project.name}</h2>
         </div>
       )
     })
@@ -72,7 +73,7 @@ const Portfolio = forwardRef((props, ref) => {
         <section id="portfolio" ref={ref}>
           <div className="row">
             <div className="twelve columns collapsed">
-              <h1>Games that I have made over the years.</h1>
+              <h1>GameJam Games</h1>
               <div
                 id="portfolio-wrapper"
                 className="bgrid-quarters s-bgrid-thirds cf portfolio-wrapper"
