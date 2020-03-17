@@ -13,7 +13,7 @@ const Header = forwardRef((props, ref) => {
     )
   })
   return (
-    <header id="home" ref={ref}>
+    <header id="home" ref={ref} className="fullheight">
       <div className="row banner">
         <div className="banner-text">
           <h1 className="responsive-headline">{name}</h1>

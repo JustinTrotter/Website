@@ -1,7 +1,12 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/node-apis/
- */
+const  jsonData = require("./src/data/resume.json");
+exports.createPages = ({ actions }) => {
+  const { createPage } = actions
 
-// You can delete this file if you're not using it
+  jsonData.projects.forEach(portfolio => {
+    createPage({
+      path: `/portfolio/${portfolio.name}`,
+      component: require.resolve(`./src/templates/portfolio-template.js`),
+      context: { portfolio },
+    })
+  })
+  }
