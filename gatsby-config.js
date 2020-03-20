@@ -19,6 +19,13 @@ module.exports = {
         name: `images`,
         path: `${__dirname}/src/images`,
       },
+      
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [`gatsby-remark-responsive-iframe`],
+      },
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,

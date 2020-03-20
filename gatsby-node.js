@@ -1,4 +1,6 @@
 const  jsonData = require("./src/data/resume.json");
+const express= require('express');
+
 exports.createPages = ({ actions }) => {
   const { createPage } = actions
 
@@ -10,3 +12,7 @@ exports.createPages = ({ actions }) => {
     })
   })
   }
+
+exports.onCreateDevServer=({app})=>{
+    app.use(express.static('public'))
+}
