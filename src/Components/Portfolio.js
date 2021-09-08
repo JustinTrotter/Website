@@ -73,7 +73,7 @@ const Portfolio = forwardRef((props, ref) => {
         <section id="portfolio" ref={ref}>
           <div className="row">
             <div className="twelve columns collapsed">
-              <h1>GameJam Games</h1>
+              <h1>GameJam Games Test</h1>
               <div
                 id="portfolio-wrapper"
                 className="bgrid-quarters s-bgrid-thirds cf portfolio-wrapper"
