@@ -7,7 +7,7 @@ export default () => {
       <iframe
         title="test"
         id="unity-iframe"
-        src="../../unity/Runtime.html"
+        src="../../unity/index.html"
         width="1280"
         height="720"
       />
